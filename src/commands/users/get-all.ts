@@ -16,8 +16,8 @@ export class UsersGet extends Command {
 
   // tslint:disable-next-line: readonly-array
   public static examples = [
-    "$ io-ops users:get-all",
-    "$ io-ops users:get-all --cursor=100",
+    "$ service-management-ops users:get-all",
+    "$ service-management-ops users:get-all --cursor=100",
   ];
 
   public static flags = {

@@ -26,7 +26,7 @@ export class UserGroupUpdate extends Command {
 
   // tslint:disable-next-line: readonly-array
   public static examples = [
-    `$ io-ops users:update-groups  --groups=ApiInfoRead,ApiLimitedMessageWrite,ApiMessageRead`,
+    `$ service-management-ops users:update-groups  --groups=ApiInfoRead,ApiLimitedMessageWrite,ApiMessageRead`,
   ];
 
   public static flags = {

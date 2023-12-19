@@ -10,7 +10,7 @@
       "pluginType": "core",
       "aliases": [],
       "examples": [
-        "$ io-ops hello\nhello world from ./src/hello.ts!\n"
+        "$ service-management-ops hello\nhello world from ./src/hello.ts!\n"
       ],
       "flags": {
         "help": {
@@ -45,8 +45,8 @@
       "pluginType": "core",
       "aliases": [],
       "examples": [
-        "$ io-ops migrate metadata",
-        "$ io-ops migrate logo"
+        "$ service-management-ops migrate metadata",
+        "$ service-management-ops migrate logo"
       ],
       "flags": {},
       "args": {
@@ -71,7 +71,7 @@
       "pluginType": "core",
       "aliases": [],
       "examples": [
-        "$ io-ops api-service:create  --json='{ \"authorized_cidrs\": [], \"authorized_recipients\": [], \"department_name\": \"department_test\", \"organization_fiscal_code\": \"12345670013\", \"organization_name\": \"organization_name\", \"service_id\": \"test-api-123\", \"service_name\": \"test_name\", \"is_visible\": false, \"max_allowed_payment_amount\": 0, \"require_secure_channels\": false }'"
+        "$ service-management-ops api-service:create  --json='{ \"authorized_cidrs\": [], \"authorized_recipients\": [], \"department_name\": \"department_test\", \"organization_fiscal_code\": \"12345670013\", \"organization_name\": \"organization_name\", \"service_id\": \"test-api-123\", \"service_name\": \"test_name\", \"is_visible\": false, \"max_allowed_payment_amount\": 0, \"require_secure_channels\": false }'"
       ],
       "flags": {
         "payload": {
@@ -93,7 +93,7 @@
       "pluginType": "core",
       "aliases": [],
       "examples": [
-        "$ io-ops api-service:get-all"
+        "$ service-management-ops api-service:get-all"
       ],
       "flags": {},
       "args": {}
@@ -107,7 +107,7 @@
       "pluginType": "core",
       "aliases": [],
       "examples": [
-        "$ io-ops api-service:get  SERVICEID"
+        "$ service-management-ops api-service:get  SERVICEID"
       ],
       "flags": {},
       "args": {
@@ -127,7 +127,7 @@
       "pluginType": "core",
       "aliases": [],
       "examples": [
-        "$ io-ops api-service:keys-regenerate  SERVICEID --key_type=PRIMARY_KEY"
+        "$ service-management-ops api-service:keys-regenerate  SERVICEID --key_type=PRIMARY_KEY"
       ],
       "flags": {
         "key_type": {
@@ -159,7 +159,7 @@
       "pluginType": "core",
       "aliases": [],
       "examples": [
-        "$ io-ops api-service:keys SERVICEID"
+        "$ service-management-ops api-service:keys SERVICEID"
       ],
       "flags": {},
       "args": {
@@ -179,7 +179,7 @@
       "pluginType": "core",
       "aliases": [],
       "examples": [
-        "$ io-ops api-service:logo SERVICEID --logo ~/PATH/logo.png"
+        "$ service-management-ops api-service:logo SERVICEID --logo ~/PATH/logo.png"
       ],
       "flags": {
         "logo": {
@@ -207,7 +207,7 @@
       "pluginType": "core",
       "aliases": [],
       "examples": [
-        "$ io-ops api-service:update  --json='{ \"authorized_cidrs\": [], \"authorized_recipients\": [], \"department_name\": \"department_test\", \"organization_fiscal_code\": \"12345670013\", \"organization_name\": \"organization_name\", \"service_id\": \"test-api-123\", \"service_name\": \"test_name\", \"is_visible\": false, \"max_allowed_payment_amount\": 0, \"require_secure_channels\": false }'"
+        "$ service-management-ops api-service:update  --json='{ \"authorized_cidrs\": [], \"authorized_recipients\": [], \"department_name\": \"department_test\", \"organization_fiscal_code\": \"12345670013\", \"organization_name\": \"organization_name\", \"service_id\": \"test-api-123\", \"service_name\": \"test_name\", \"is_visible\": false, \"max_allowed_payment_amount\": 0, \"require_secure_channels\": false }'"
       ],
       "flags": {
         "payload": {
@@ -397,6 +397,45 @@
       "flags": {},
       "args": {}
     },
+    "selfcare:addDelegates": {
+      "id": "selfcare:addDelegates",
+      "description": "Add delegate on Selfcare",
+      "strict": true,
+      "pluginName": "service-management-ops",
+      "pluginAlias": "service-management-ops",
+      "pluginType": "core",
+      "aliases": [],
+      "examples": [
+        "$ service-management-ops selfcare:add-delegates "
+      ],
+      "flags": {
+        "institutionTaxCode": {
+          "name": "institutionTaxCode",
+          "type": "option",
+          "char": "i",
+          "description": "Selfcare institutionTaxCode",
+          "required": true,
+          "multiple": false
+        },
+        "productId": {
+          "name": "productId",
+          "type": "option",
+          "char": "p",
+          "description": "Selfcare productId",
+          "required": true,
+          "multiple": false
+        },
+        "delegates": {
+          "name": "delegates",
+          "type": "option",
+          "char": "d",
+          "description": "Selfcare delegates",
+          "required": true,
+          "multiple": false
+        }
+      },
+      "args": {}
+    },
     "selfcare:manualOnboarding": {
       "id": "selfcare:manualOnboarding",
       "description": "Execute Manual Onboarding on Selfcare",
@@ -406,7 +445,7 @@
       "pluginType": "core",
       "aliases": [],
       "examples": [
-        "$ io-ops manual-onboarding-by-body '{}'"
+        "$ service-management-ops selfcare:manual-onboarding-by-body '{}'"
       ],
       "flags": {},
       "args": {
@@ -467,7 +506,7 @@
       "pluginType": "core",
       "aliases": [],
       "examples": [
-        "$ io-ops subscriptions:list-delete -inputListPath=/tmp/input.csv"
+        "$ service-management-ops subscriptions:list-delete -inputListPath=/tmp/input.csv"
       ],
       "flags": {},
       "args": {
@@ -498,7 +537,7 @@
       "pluginType": "core",
       "aliases": [],
       "examples": [
-        "$ io-ops api-service:create  --json='{ \"email\": \"foobar@example.com\",\"first_name\": \"string\",\"last_name\": \"string\"}'"
+        "$ service-management-ops api-service:create  --json='{ \"email\": \"foobar@example.com\",\"first_name\": \"string\",\"last_name\": \"string\"}'"
       ],
       "flags": {
         "payload": {
@@ -520,8 +559,8 @@
       "pluginType": "core",
       "aliases": [],
       "examples": [
-        "$ io-ops users:get-all",
-        "$ io-ops users:get-all --cursor=100"
+        "$ service-management-ops users:get-all",
+        "$ service-management-ops users:get-all --cursor=100"
       ],
       "flags": {
         "cursor": {
@@ -543,7 +582,7 @@
       "pluginType": "core",
       "aliases": [],
       "examples": [
-        "$ io-ops users:get example@example.it"
+        "$ service-management-ops users:get example@example.it"
       ],
       "flags": {},
       "args": {
@@ -563,7 +602,7 @@
       "pluginType": "core",
       "aliases": [],
       "examples": [
-        "$ io-ops users:subscription  example@example.com SUBSCRIPTIONID --product_name=PRODUCTNAME"
+        "$ service-management-ops users:subscription  example@example.com SUBSCRIPTIONID --product_name=PRODUCTNAME"
       ],
       "flags": {
         "product_name": {
@@ -596,7 +635,7 @@
       "pluginType": "core",
       "aliases": [],
       "examples": [
-        "$ io-ops users:update-groups  --groups=ApiInfoRead,ApiLimitedMessageWrite,ApiMessageRead"
+        "$ service-management-ops users:update-groups  --groups=ApiInfoRead,ApiLimitedMessageWrite,ApiMessageRead"
       ],
       "flags": {
         "groups": {
@@ -624,7 +663,7 @@
       "pluginType": "core",
       "aliases": [],
       "examples": [
-        "$ io-ops users:update-token-name"
+        "$ service-management-ops users:update-token-name"
       ],
       "flags": {},
       "args": {
@@ -649,7 +688,7 @@
       "pluginType": "core",
       "aliases": [],
       "examples": [
-        "$ io-ops users:write-messages example@example.it enable"
+        "$ service-management-ops users:write-messages example@example.it enable"
       ],
       "flags": {},
       "args": {
@@ -674,7 +713,7 @@
       "pluginType": "core",
       "aliases": [],
       "examples": [
-        "$ io-ops users:write-services example@example.it enable"
+        "$ service-management-ops users:write-services example@example.it enable"
       ],
       "flags": {},
       "args": {

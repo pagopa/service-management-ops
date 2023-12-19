@@ -67,7 +67,7 @@ export class ListDelete extends Command {
 
   // tslint:disable-next-line: readonly-array
   public static examples = [
-    "$ io-ops subscriptions:list-delete -inputListPath=/tmp/input.csv",
+    "$ service-management-ops subscriptions:list-delete -inputListPath=/tmp/input.csv",
   ];
 
   // tslint:disable-next-line: readonly-array

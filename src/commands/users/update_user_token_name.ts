@@ -29,7 +29,7 @@ export class UserTokenNameUpdate extends Command {
   };
 
   // tslint:disable-next-line: readonly-array
-  public static examples = [`$ io-ops users:update-token-name`];
+  public static examples = [`$ service-management-ops users:update-token-name`];
 
   public static flags = {};
 

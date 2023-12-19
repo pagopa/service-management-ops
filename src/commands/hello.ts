@@ -5,7 +5,7 @@ export default class Hello extends Command {
 
   // tslint:disable-next-line: readonly-array
   public static examples = [
-    `$ io-ops hello
+    `$ service-management-ops hello
 hello world from ./src/hello.ts!
 `,
   ];

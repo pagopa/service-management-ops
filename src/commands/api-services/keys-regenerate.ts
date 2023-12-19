@@ -17,7 +17,7 @@ export class KeyRegenerate extends Command {
 
   // tslint:disable-next-line: readonly-array
   public static examples = [
-    `$ io-ops api-service:keys-regenerate  SERVICEID --key_type=PRIMARY_KEY`,
+    `$ service-management-ops api-service:keys-regenerate  SERVICEID --key_type=PRIMARY_KEY`,
   ];
 
   public static args = {

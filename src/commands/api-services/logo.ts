@@ -18,7 +18,7 @@ export class ServiceLogo extends Command {
 
   // tslint:disable-next-line: readonly-array
   public static examples = [
-    "$ io-ops api-service:logo SERVICEID --logo ~/PATH/logo.png",
+    "$ service-management-ops api-service:logo SERVICEID --logo ~/PATH/logo.png",
   ];
 
   // tslint:disable-next-line: readonly-array

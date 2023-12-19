@@ -16,7 +16,7 @@ export class UserGet extends Command {
     "Gets the user information, that is the complete list of subscription and the complete list of groups for the User identified by the provided email";
 
   // tslint:disable-next-line: readonly-array
-  public static examples = ["$ io-ops users:get example@example.it"];
+  public static examples = ["$ service-management-ops users:get example@example.it"];
 
   // tslint:disable-next-line: readonly-array
   public static args = {

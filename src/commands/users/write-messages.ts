@@ -43,7 +43,7 @@ export class WriteMessages extends Command {
 
   // tslint:disable-next-line: readonly-array
   public static examples = [
-    `$ io-ops users:write-messages example@example.it enable`,
+    `$ service-management-ops users:write-messages example@example.it enable`,
   ];
 
   public async run(): Promise<void> {

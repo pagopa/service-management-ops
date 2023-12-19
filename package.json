@@ -83,13 +83,13 @@
   "main": "lib/index.js",
   "oclif": {
     "commands": "./lib/commands",
-    "bin": "io-ops",
+    "bin": "service-management-ops",
     "plugins": [
       "@oclif/plugin-help",
       "@oclif/plugin-plugins"
     ]
   },
-  "repository": "pagopa/io-ops",
+  "repository": "pagopa/service-management-ops",
   "scripts": {
     "generate:openapi-models": "shx rm -rf src/generated/admin && mkdir -p src/generated/admin && gen-api-models --api-spec https://raw.githubusercontent.com/pagopa/io-functions-admin/master/openapi/index.yaml --out-dir src/generated/admin --no-strict --request-types --response-decoders --client",
     "generate:openapi-models-selfcare": "shx rm -rf src/generated/selfcare && mkdir -p src/generated/selfcare && gen-api-models --api-spec https://raw.githubusercontent.com/pagopa/selfcare-infra/main/src/core/api/ms_internal_api/v1/open-api.yml.tpl --out-dir src/generated/selfcare --no-strict --request-types --response-decoders --client",

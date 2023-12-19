@@ -29,8 +29,8 @@ export class Migrate extends Command {
 
   // tslint:disable-next-line: readonly-array
   public static examples = [
-    "$ io-ops migrate metadata",
-    "$ io-ops migrate logo",
+    "$ service-management-ops migrate metadata",
+    "$ service-management-ops migrate logo",
   ];
 
   // tslint:disable-next-line: readonly-array

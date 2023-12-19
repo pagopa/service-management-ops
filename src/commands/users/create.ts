@@ -17,7 +17,7 @@ export class UserCreate extends Command {
 
   // tslint:disable-next-line: readonly-array
   public static examples = [
-    `$ io-ops api-service:create  --json='{ "email": "foobar@example.com","first_name": "string","last_name": "string"}'`,
+    `$ service-management-ops api-service:create  --json='{ "email": "foobar@example.com","first_name": "string","last_name": "string"}'`,
   ];
 
   public static flags = {
