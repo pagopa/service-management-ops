@@ -14,7 +14,7 @@ export class Keys extends Command {
   public static description = "Get subscription keys associated to service";
 
   // tslint:disable-next-line: readonly-array
-  public static examples = [`$ io-ops api-service:keys SERVICEID`];
+  public static examples = [`$ service-management-ops api-service:keys SERVICEID`];
 
   // tslint:disable-next-line: readonly-array
   public static args = {

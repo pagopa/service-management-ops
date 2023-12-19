@@ -14,7 +14,7 @@ export class ServiceGet extends Command {
   public static description = "Get all services";
 
   // tslint:disable-next-line: readonly-array
-  public static examples = ["$ io-ops api-service:get-all"];
+  public static examples = ["$ service-management-ops api-service:get-all"];
 
   public async run(): Promise<void> {
     // tslint:disable-next-line: no-console

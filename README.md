@@ -67,6 +67,7 @@ USAGE
 * [`service-management-ops profiles:delete FISCALCODE`](#service-management-ops-profilesdelete-fiscalcode)
 * [`service-management-ops profiles:exist`](#service-management-ops-profilesexist)
 * [`service-management-ops profiles:list`](#service-management-ops-profileslist)
+* [`service-management-ops selfcare:addDelegate`](#service-management-ops-selfcareadddelegate)
 * [`service-management-ops selfcare:manualOnboarding BODY`](#service-management-ops-selfcaremanualonboarding-body)
 * [`service-management-ops services:check`](#service-management-ops-servicescheck)
 * [`service-management-ops services:details`](#service-management-ops-servicesdetails)
@@ -638,6 +639,31 @@ DESCRIPTION
 
 _See code: [src/commands/profiles/list.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/profiles/list.ts)_
 
+## `service-management-ops selfcare:addDelegate`
+
+Add delegate on Selfcare
+
+```
+USAGE
+  $ service-management-ops selfcare:addDelegate -i <value> -p <value> -e <value> -n <value> -s <value> -t <value>
+
+FLAGS
+  -e, --email=<value>               (required) Selfcare delegate's email
+  -i, --institutionTaxCode=<value>  (required) Selfcare institutionTaxCode
+  -n, --name=<value>                (required) Selfcare delegate's name
+  -p, --productId=<value>           (required) Selfcare productId
+  -s, --surname=<value>             (required) Selfcare delegate's surname
+  -t, --taxCode=<value>             (required) Selfcare delegate's taxCode
+
+DESCRIPTION
+  Add delegate on Selfcare
+
+EXAMPLES
+  $ service-management-ops selfcare:add-delegate '{}'
+```
+
+_See code: [src/commands/selfcare/addDelegate.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/selfcare/addDelegate.ts)_
+
 ## `service-management-ops selfcare:manualOnboarding BODY`
 
 Execute Manual Onboarding on Selfcare
@@ -653,7 +679,7 @@ DESCRIPTION
   Execute Manual Onboarding on Selfcare
 
 EXAMPLES
-  $ service-management-ops manual-onboarding-by-body '{}'
+  $ service-management-ops selfcare:manual-onboarding-by-body '{}'
 ```
 
 _See code: [src/commands/selfcare/manualOnboarding.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/selfcare/manualOnboarding.ts)_

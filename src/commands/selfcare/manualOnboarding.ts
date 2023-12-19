@@ -14,7 +14,7 @@ export class ManualOnboardingByBody extends Command {
   public static description = "Execute Manual Onboarding on Selfcare";
 
   // tslint:disable-next-line: readonly-array
-  public static examples = ["$ io-ops manual-onboarding-by-body '{}'"];
+  public static examples = ["$ service-management-ops selfcare:manual-onboarding-by-body '{}'"];
 
   // tslint:disable-next-line: readonly-array
   public static args = {
