@@ -397,8 +397,8 @@
       "flags": {},
       "args": {}
     },
-    "selfcare:addDelegate": {
-      "id": "selfcare:addDelegate",
+    "selfcare:addDelegates": {
+      "id": "selfcare:addDelegates",
       "description": "Add delegate on Selfcare",
       "strict": true,
       "pluginName": "service-management-ops",
@@ -406,7 +406,7 @@
       "pluginType": "core",
       "aliases": [],
       "examples": [
-        "$ service-management-ops selfcare:add-delegate '{}'"
+        "$ service-management-ops selfcare:add-delegates "
       ],
       "flags": {
         "institutionTaxCode": {
@@ -425,35 +425,11 @@
           "required": true,
           "multiple": false
         },
-        "email": {
-          "name": "email",
+        "delegates": {
+          "name": "delegates",
           "type": "option",
-          "char": "e",
-          "description": "Selfcare delegate's email",
-          "required": true,
-          "multiple": false
-        },
-        "name": {
-          "name": "name",
-          "type": "option",
-          "char": "n",
-          "description": "Selfcare delegate's name",
-          "required": true,
-          "multiple": false
-        },
-        "surname": {
-          "name": "surname",
-          "type": "option",
-          "char": "s",
-          "description": "Selfcare delegate's surname",
-          "required": true,
-          "multiple": false
-        },
-        "taxCode": {
-          "name": "taxCode",
-          "type": "option",
-          "char": "t",
-          "description": "Selfcare delegate's taxCode",
+          "char": "d",
+          "description": "Selfcare delegates",
           "required": true,
           "multiple": false
         }

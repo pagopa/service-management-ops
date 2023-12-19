@@ -67,7 +67,7 @@ USAGE
 * [`service-management-ops profiles:delete FISCALCODE`](#service-management-ops-profilesdelete-fiscalcode)
 * [`service-management-ops profiles:exist`](#service-management-ops-profilesexist)
 * [`service-management-ops profiles:list`](#service-management-ops-profileslist)
-* [`service-management-ops selfcare:addDelegate`](#service-management-ops-selfcareadddelegate)
+* [`service-management-ops selfcare:addDelegates`](#service-management-ops-selfcareadddelegates)
 * [`service-management-ops selfcare:manualOnboarding BODY`](#service-management-ops-selfcaremanualonboarding-body)
 * [`service-management-ops services:check`](#service-management-ops-servicescheck)
 * [`service-management-ops services:details`](#service-management-ops-servicesdetails)
@@ -639,30 +639,27 @@ DESCRIPTION
 
 _See code: [src/commands/profiles/list.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/profiles/list.ts)_
 
-## `service-management-ops selfcare:addDelegate`
+## `service-management-ops selfcare:addDelegates`
 
 Add delegate on Selfcare
 
 ```
 USAGE
-  $ service-management-ops selfcare:addDelegate -i <value> -p <value> -e <value> -n <value> -s <value> -t <value>
+  $ service-management-ops selfcare:addDelegates -i <value> -p <value> -d <value>
 
 FLAGS
-  -e, --email=<value>               (required) Selfcare delegate's email
+  -d, --delegates=<value>           (required) Selfcare delegates
   -i, --institutionTaxCode=<value>  (required) Selfcare institutionTaxCode
-  -n, --name=<value>                (required) Selfcare delegate's name
   -p, --productId=<value>           (required) Selfcare productId
-  -s, --surname=<value>             (required) Selfcare delegate's surname
-  -t, --taxCode=<value>             (required) Selfcare delegate's taxCode
 
 DESCRIPTION
   Add delegate on Selfcare
 
 EXAMPLES
-  $ service-management-ops selfcare:add-delegate '{}'
+  $ service-management-ops selfcare:add-delegates
 ```
 
-_See code: [src/commands/selfcare/addDelegate.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/selfcare/addDelegate.ts)_
+_See code: [src/commands/selfcare/addDelegates.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/selfcare/addDelegates.ts)_
 
 ## `service-management-ops selfcare:manualOnboarding BODY`
 
