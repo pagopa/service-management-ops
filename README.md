@@ -28,13 +28,13 @@ The following sets of commands require the environment variabiles listed in the 
 <!-- usage -->
 ```sh-session
 $ npm install -g service-management-ops
-$ io-ops COMMAND
+$ service-management-ops COMMAND
 running command...
-$ io-ops (--version)
+$ service-management-ops (--version)
 service-management-ops/1.0.0 darwin-x64 node-v18.13.0
-$ io-ops --help [COMMAND]
+$ service-management-ops --help [COMMAND]
 USAGE
-  $ io-ops COMMAND
+  $ service-management-ops COMMAND
 ...
 ```
 <!-- usagestop -->
@@ -42,52 +42,52 @@ USAGE
 # Commands
 
 <!-- commands -->
-* [`io-ops api-services:create`](#io-ops-api-servicescreate)
-* [`io-ops api-services:get SERVICEID`](#io-ops-api-servicesget-serviceid)
-* [`io-ops api-services:get-all`](#io-ops-api-servicesget-all)
-* [`io-ops api-services:keys SERVICEID`](#io-ops-api-serviceskeys-serviceid)
-* [`io-ops api-services:keys-regenerate SERVICEID`](#io-ops-api-serviceskeys-regenerate-serviceid)
-* [`io-ops api-services:logo SERVICEID`](#io-ops-api-serviceslogo-serviceid)
-* [`io-ops api-services:update`](#io-ops-api-servicesupdate)
-* [`io-ops hello`](#io-ops-hello)
-* [`io-ops help [COMMANDS]`](#io-ops-help-commands)
-* [`io-ops messages:attributes`](#io-ops-messagesattributes)
-* [`io-ops messages:check-content`](#io-ops-messagescheck-content)
-* [`io-ops messages:list FISCALCODE`](#io-ops-messageslist-fiscalcode)
-* [`io-ops migrate-services METADATA`](#io-ops-migrate-services-metadata)
-* [`io-ops plugins`](#io-ops-plugins)
-* [`io-ops plugins:install PLUGIN...`](#io-ops-pluginsinstall-plugin)
-* [`io-ops plugins:inspect PLUGIN...`](#io-ops-pluginsinspect-plugin)
-* [`io-ops plugins:install PLUGIN...`](#io-ops-pluginsinstall-plugin-1)
-* [`io-ops plugins:link PLUGIN`](#io-ops-pluginslink-plugin)
-* [`io-ops plugins:uninstall PLUGIN...`](#io-ops-pluginsuninstall-plugin)
-* [`io-ops plugins:uninstall PLUGIN...`](#io-ops-pluginsuninstall-plugin-1)
-* [`io-ops plugins:uninstall PLUGIN...`](#io-ops-pluginsuninstall-plugin-2)
-* [`io-ops plugins:update`](#io-ops-pluginsupdate)
-* [`io-ops profiles:delete FISCALCODE`](#io-ops-profilesdelete-fiscalcode)
-* [`io-ops profiles:exist`](#io-ops-profilesexist)
-* [`io-ops profiles:list`](#io-ops-profileslist)
-* [`io-ops selfcare:manualOnboarding BODY`](#io-ops-selfcaremanualonboarding-body)
-* [`io-ops services:check`](#io-ops-servicescheck)
-* [`io-ops services:details`](#io-ops-servicesdetails)
-* [`io-ops services:list`](#io-ops-serviceslist)
-* [`io-ops subscriptions:list-delete DELETEFILEPATH [DELAYONDELETE] [OWNEREMAIL]`](#io-ops-subscriptionslist-delete-deletefilepath-delayondelete-owneremail)
-* [`io-ops users:create`](#io-ops-userscreate)
-* [`io-ops users:get EMAIL`](#io-ops-usersget-email)
-* [`io-ops users:get-all`](#io-ops-usersget-all)
-* [`io-ops users:subscription EMAIL SUBSCRIPTIONID`](#io-ops-userssubscription-email-subscriptionid)
-* [`io-ops users:update-groups EMAIL`](#io-ops-usersupdate-groups-email)
-* [`io-ops users:update_user_token_name EMAIL TOKENNAMEVALUE`](#io-ops-usersupdate_user_token_name-email-tokennamevalue)
-* [`io-ops users:write-messages EMAIL ACTION`](#io-ops-userswrite-messages-email-action)
-* [`io-ops users:write-services EMAIL ACTION`](#io-ops-userswrite-services-email-action)
+* [`service-management-ops api-services:create`](#service-management-ops-api-servicescreate)
+* [`service-management-ops api-services:get SERVICEID`](#service-management-ops-api-servicesget-serviceid)
+* [`service-management-ops api-services:get-all`](#service-management-ops-api-servicesget-all)
+* [`service-management-ops api-services:keys SERVICEID`](#service-management-ops-api-serviceskeys-serviceid)
+* [`service-management-ops api-services:keys-regenerate SERVICEID`](#service-management-ops-api-serviceskeys-regenerate-serviceid)
+* [`service-management-ops api-services:logo SERVICEID`](#service-management-ops-api-serviceslogo-serviceid)
+* [`service-management-ops api-services:update`](#service-management-ops-api-servicesupdate)
+* [`service-management-ops hello`](#service-management-ops-hello)
+* [`service-management-ops help [COMMANDS]`](#service-management-ops-help-commands)
+* [`service-management-ops messages:attributes`](#service-management-ops-messagesattributes)
+* [`service-management-ops messages:check-content`](#service-management-ops-messagescheck-content)
+* [`service-management-ops messages:list FISCALCODE`](#service-management-ops-messageslist-fiscalcode)
+* [`service-management-ops migrate-services METADATA`](#service-management-ops-migrate-services-metadata)
+* [`service-management-ops plugins`](#service-management-ops-plugins)
+* [`service-management-ops plugins:install PLUGIN...`](#service-management-ops-pluginsinstall-plugin)
+* [`service-management-ops plugins:inspect PLUGIN...`](#service-management-ops-pluginsinspect-plugin)
+* [`service-management-ops plugins:install PLUGIN...`](#service-management-ops-pluginsinstall-plugin-1)
+* [`service-management-ops plugins:link PLUGIN`](#service-management-ops-pluginslink-plugin)
+* [`service-management-ops plugins:uninstall PLUGIN...`](#service-management-ops-pluginsuninstall-plugin)
+* [`service-management-ops plugins:uninstall PLUGIN...`](#service-management-ops-pluginsuninstall-plugin-1)
+* [`service-management-ops plugins:uninstall PLUGIN...`](#service-management-ops-pluginsuninstall-plugin-2)
+* [`service-management-ops plugins:update`](#service-management-ops-pluginsupdate)
+* [`service-management-ops profiles:delete FISCALCODE`](#service-management-ops-profilesdelete-fiscalcode)
+* [`service-management-ops profiles:exist`](#service-management-ops-profilesexist)
+* [`service-management-ops profiles:list`](#service-management-ops-profileslist)
+* [`service-management-ops selfcare:manualOnboarding BODY`](#service-management-ops-selfcaremanualonboarding-body)
+* [`service-management-ops services:check`](#service-management-ops-servicescheck)
+* [`service-management-ops services:details`](#service-management-ops-servicesdetails)
+* [`service-management-ops services:list`](#service-management-ops-serviceslist)
+* [`service-management-ops subscriptions:list-delete DELETEFILEPATH [DELAYONDELETE] [OWNEREMAIL]`](#service-management-ops-subscriptionslist-delete-deletefilepath-delayondelete-owneremail)
+* [`service-management-ops users:create`](#service-management-ops-userscreate)
+* [`service-management-ops users:get EMAIL`](#service-management-ops-usersget-email)
+* [`service-management-ops users:get-all`](#service-management-ops-usersget-all)
+* [`service-management-ops users:subscription EMAIL SUBSCRIPTIONID`](#service-management-ops-userssubscription-email-subscriptionid)
+* [`service-management-ops users:update-groups EMAIL`](#service-management-ops-usersupdate-groups-email)
+* [`service-management-ops users:update_user_token_name EMAIL TOKENNAMEVALUE`](#service-management-ops-usersupdate_user_token_name-email-tokennamevalue)
+* [`service-management-ops users:write-messages EMAIL ACTION`](#service-management-ops-userswrite-messages-email-action)
+* [`service-management-ops users:write-services EMAIL ACTION`](#service-management-ops-userswrite-services-email-action)
 
-## `io-ops api-services:create`
+## `service-management-ops api-services:create`
 
 Create a service
 
 ```
 USAGE
-  $ io-ops api-services:create --payload <value>
+  $ service-management-ops api-services:create --payload <value>
 
 FLAGS
   --payload=<value>  (required) JSON string rapresentation of a service
@@ -96,18 +96,18 @@ DESCRIPTION
   Create a service
 
 EXAMPLES
-  $ io-ops api-service:create  --json='{ "authorized_cidrs": [], "authorized_recipients": [], "department_name": "department_test", "organization_fiscal_code": "12345670013", "organization_name": "organization_name", "service_id": "test-api-123", "service_name": "test_name", "is_visible": false, "max_allowed_payment_amount": 0, "require_secure_channels": false }'
+  $ service-management-ops api-service:create  --json='{ "authorized_cidrs": [], "authorized_recipients": [], "department_name": "department_test", "organization_fiscal_code": "12345670013", "organization_name": "organization_name", "service_id": "test-api-123", "service_name": "test_name", "is_visible": false, "max_allowed_payment_amount": 0, "require_secure_channels": false }'
 ```
 
-_See code: [src/commands/api-services/create.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/api-services/create.ts)_
+_See code: [src/commands/api-services/create.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/api-services/create.ts)_
 
-## `io-ops api-services:get SERVICEID`
+## `service-management-ops api-services:get SERVICEID`
 
 Get the service by serviceId
 
 ```
 USAGE
-  $ io-ops api-services:get SERVICEID
+  $ service-management-ops api-services:get SERVICEID
 
 ARGUMENTS
   SERVICEID  id of the service
@@ -116,35 +116,35 @@ DESCRIPTION
   Get the service by serviceId
 
 EXAMPLES
-  $ io-ops api-service:get  SERVICEID
+  $ service-management-ops api-service:get  SERVICEID
 ```
 
-_See code: [src/commands/api-services/get.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/api-services/get.ts)_
+_See code: [src/commands/api-services/get.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/api-services/get.ts)_
 
-## `io-ops api-services:get-all`
+## `service-management-ops api-services:get-all`
 
 Get all services
 
 ```
 USAGE
-  $ io-ops api-services:get-all
+  $ service-management-ops api-services:get-all
 
 DESCRIPTION
   Get all services
 
 EXAMPLES
-  $ io-ops api-service:get-all
+  $ service-management-ops api-service:get-all
 ```
 
-_See code: [src/commands/api-services/get-all.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/api-services/get-all.ts)_
+_See code: [src/commands/api-services/get-all.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/api-services/get-all.ts)_
 
-## `io-ops api-services:keys SERVICEID`
+## `service-management-ops api-services:keys SERVICEID`
 
 Get subscription keys associated to service
 
 ```
 USAGE
-  $ io-ops api-services:keys SERVICEID
+  $ service-management-ops api-services:keys SERVICEID
 
 ARGUMENTS
   SERVICEID  id of the service
@@ -153,18 +153,18 @@ DESCRIPTION
   Get subscription keys associated to service
 
 EXAMPLES
-  $ io-ops api-service:keys SERVICEID
+  $ service-management-ops api-service:keys SERVICEID
 ```
 
-_See code: [src/commands/api-services/keys.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/api-services/keys.ts)_
+_See code: [src/commands/api-services/keys.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/api-services/keys.ts)_
 
-## `io-ops api-services:keys-regenerate SERVICEID`
+## `service-management-ops api-services:keys-regenerate SERVICEID`
 
 Regenerate keys associated to service
 
 ```
 USAGE
-  $ io-ops api-services:keys-regenerate SERVICEID --key_type PRIMARY_KEY|SECONDARY_KEY
+  $ service-management-ops api-services:keys-regenerate SERVICEID --key_type PRIMARY_KEY|SECONDARY_KEY
 
 ARGUMENTS
   SERVICEID  id of the service
@@ -177,18 +177,18 @@ DESCRIPTION
   Regenerate keys associated to service
 
 EXAMPLES
-  $ io-ops api-service:keys-regenerate  SERVICEID --key_type=PRIMARY_KEY
+  $ service-management-ops api-service:keys-regenerate  SERVICEID --key_type=PRIMARY_KEY
 ```
 
-_See code: [src/commands/api-services/keys-regenerate.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/api-services/keys-regenerate.ts)_
+_See code: [src/commands/api-services/keys-regenerate.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/api-services/keys-regenerate.ts)_
 
-## `io-ops api-services:logo SERVICEID`
+## `service-management-ops api-services:logo SERVICEID`
 
 Update service data with base64 of the logo
 
 ```
 USAGE
-  $ io-ops api-services:logo SERVICEID --logo <value>
+  $ service-management-ops api-services:logo SERVICEID --logo <value>
 
 ARGUMENTS
   SERVICEID  id of the service
@@ -200,18 +200,18 @@ DESCRIPTION
   Update service data with base64 of the logo
 
 EXAMPLES
-  $ io-ops api-service:logo SERVICEID --logo ~/PATH/logo.png
+  $ service-management-ops api-service:logo SERVICEID --logo ~/PATH/logo.png
 ```
 
-_See code: [src/commands/api-services/logo.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/api-services/logo.ts)_
+_See code: [src/commands/api-services/logo.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/api-services/logo.ts)_
 
-## `io-ops api-services:update`
+## `service-management-ops api-services:update`
 
 Update a service
 
 ```
 USAGE
-  $ io-ops api-services:update --payload <value>
+  $ service-management-ops api-services:update --payload <value>
 
 FLAGS
   --payload=<value>  (required) JSON string rapresentation of a service
@@ -220,18 +220,18 @@ DESCRIPTION
   Update a service
 
 EXAMPLES
-  $ io-ops api-service:update  --json='{ "authorized_cidrs": [], "authorized_recipients": [], "department_name": "department_test", "organization_fiscal_code": "12345670013", "organization_name": "organization_name", "service_id": "test-api-123", "service_name": "test_name", "is_visible": false, "max_allowed_payment_amount": 0, "require_secure_channels": false }'
+  $ service-management-ops api-service:update  --json='{ "authorized_cidrs": [], "authorized_recipients": [], "department_name": "department_test", "organization_fiscal_code": "12345670013", "organization_name": "organization_name", "service_id": "test-api-123", "service_name": "test_name", "is_visible": false, "max_allowed_payment_amount": 0, "require_secure_channels": false }'
 ```
 
-_See code: [src/commands/api-services/update.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/api-services/update.ts)_
+_See code: [src/commands/api-services/update.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/api-services/update.ts)_
 
-## `io-ops hello`
+## `service-management-ops hello`
 
 describe the command here
 
 ```
 USAGE
-  $ io-ops hello [-h] [-n <value>] [-f]
+  $ service-management-ops hello [-h] [-n <value>] [-f]
 
 FLAGS
   -f, --force
@@ -242,19 +242,19 @@ DESCRIPTION
   describe the command here
 
 EXAMPLES
-  $ io-ops hello
+  $ service-management-ops hello
   hello world from ./src/hello.ts!
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/hello.ts)_
+_See code: [src/commands/hello.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/hello.ts)_
 
-## `io-ops help [COMMANDS]`
+## `service-management-ops help [COMMANDS]`
 
-Display help for io-ops.
+Display help for service-management-ops.
 
 ```
 USAGE
-  $ io-ops help [COMMANDS] [-n]
+  $ service-management-ops help [COMMANDS] [-n]
 
 ARGUMENTS
   COMMANDS  Command to show help for.
@@ -263,18 +263,18 @@ FLAGS
   -n, --nested-commands  Include all nested commands in the output.
 
 DESCRIPTION
-  Display help for io-ops.
+  Display help for service-management-ops.
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.2.10/src/commands/help.ts)_
 
-## `io-ops messages:attributes`
+## `service-management-ops messages:attributes`
 
 Update message attributes
 
 ```
 USAGE
-  $ io-ops messages:attributes -i <value> [-p <value>] [--isPending true|false|undefined]
+  $ service-management-ops messages:attributes -i <value> [-p <value>] [--isPending true|false|undefined]
 
 FLAGS
   -i, --input=<value>     (required) Input file (CSV, with path as first column)
@@ -286,15 +286,15 @@ DESCRIPTION
   Update message attributes
 ```
 
-_See code: [src/commands/messages/attributes.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/messages/attributes.ts)_
+_See code: [src/commands/messages/attributes.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/messages/attributes.ts)_
 
-## `io-ops messages:check-content`
+## `service-management-ops messages:check-content`
 
 Checks validity of messages
 
 ```
 USAGE
-  $ io-ops messages:check-content [-i <value>] [-p <value>]
+  $ service-management-ops messages:check-content [-i <value>] [-p <value>]
 
 FLAGS
   -i, --input=<value>     Input file (CSV, with path as first column) - defaults to stdin
@@ -304,29 +304,29 @@ DESCRIPTION
   Checks validity of messages
 ```
 
-_See code: [src/commands/messages/check-content.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/messages/check-content.ts)_
+_See code: [src/commands/messages/check-content.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/messages/check-content.ts)_
 
-## `io-ops messages:list FISCALCODE`
+## `service-management-ops messages:list FISCALCODE`
 
 List messages for a fiscalCode
 
 ```
 USAGE
-  $ io-ops messages:list FISCALCODE
+  $ service-management-ops messages:list FISCALCODE
 
 DESCRIPTION
   List messages for a fiscalCode
 ```
 
-_See code: [src/commands/messages/list.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/messages/list.ts)_
+_See code: [src/commands/messages/list.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/messages/list.ts)_
 
-## `io-ops migrate-services METADATA`
+## `service-management-ops migrate-services METADATA`
 
 Migrate metadata or logos from github
 
 ```
 USAGE
-  $ io-ops migrate-services METADATA
+  $ service-management-ops migrate-services METADATA
 
 ARGUMENTS
   METADATA  (metadata|logo) Migrate metadata or logo from github
@@ -335,20 +335,20 @@ DESCRIPTION
   Migrate metadata or logos from github
 
 EXAMPLES
-  $ io-ops migrate metadata
+  $ service-management-ops migrate metadata
 
-  $ io-ops migrate logo
+  $ service-management-ops migrate logo
 ```
 
-_See code: [src/commands/migrate-services.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/migrate-services.ts)_
+_See code: [src/commands/migrate-services.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/migrate-services.ts)_
 
-## `io-ops plugins`
+## `service-management-ops plugins`
 
 List installed plugins.
 
 ```
 USAGE
-  $ io-ops plugins [--core]
+  $ service-management-ops plugins [--core]
 
 FLAGS
   --core  Show core plugins.
@@ -357,18 +357,18 @@ DESCRIPTION
   List installed plugins.
 
 EXAMPLES
-  $ io-ops plugins
+  $ service-management-ops plugins
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.4.7/src/commands/plugins/index.ts)_
 
-## `io-ops plugins:install PLUGIN...`
+## `service-management-ops plugins:install PLUGIN...`
 
 Installs a plugin into the CLI.
 
 ```
 USAGE
-  $ io-ops plugins:install PLUGIN...
+  $ service-management-ops plugins:install PLUGIN...
 
 ARGUMENTS
   PLUGIN  Plugin to install.
@@ -390,23 +390,23 @@ DESCRIPTION
 
 
 ALIASES
-  $ io-ops plugins:add
+  $ service-management-ops plugins:add
 
 EXAMPLES
-  $ io-ops plugins:install myplugin 
+  $ service-management-ops plugins:install myplugin 
 
-  $ io-ops plugins:install https://github.com/someuser/someplugin
+  $ service-management-ops plugins:install https://github.com/someuser/someplugin
 
-  $ io-ops plugins:install someuser/someplugin
+  $ service-management-ops plugins:install someuser/someplugin
 ```
 
-## `io-ops plugins:inspect PLUGIN...`
+## `service-management-ops plugins:inspect PLUGIN...`
 
 Displays installation properties of a plugin.
 
 ```
 USAGE
-  $ io-ops plugins:inspect PLUGIN...
+  $ service-management-ops plugins:inspect PLUGIN...
 
 ARGUMENTS
   PLUGIN  [default: .] Plugin to inspect.
@@ -422,18 +422,18 @@ DESCRIPTION
   Displays installation properties of a plugin.
 
 EXAMPLES
-  $ io-ops plugins:inspect myplugin
+  $ service-management-ops plugins:inspect myplugin
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.4.7/src/commands/plugins/inspect.ts)_
 
-## `io-ops plugins:install PLUGIN...`
+## `service-management-ops plugins:install PLUGIN...`
 
 Installs a plugin into the CLI.
 
 ```
 USAGE
-  $ io-ops plugins:install PLUGIN...
+  $ service-management-ops plugins:install PLUGIN...
 
 ARGUMENTS
   PLUGIN  Plugin to install.
@@ -455,25 +455,25 @@ DESCRIPTION
 
 
 ALIASES
-  $ io-ops plugins:add
+  $ service-management-ops plugins:add
 
 EXAMPLES
-  $ io-ops plugins:install myplugin 
+  $ service-management-ops plugins:install myplugin 
 
-  $ io-ops plugins:install https://github.com/someuser/someplugin
+  $ service-management-ops plugins:install https://github.com/someuser/someplugin
 
-  $ io-ops plugins:install someuser/someplugin
+  $ service-management-ops plugins:install someuser/someplugin
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.4.7/src/commands/plugins/install.ts)_
 
-## `io-ops plugins:link PLUGIN`
+## `service-management-ops plugins:link PLUGIN`
 
 Links a plugin into the CLI for development.
 
 ```
 USAGE
-  $ io-ops plugins:link PLUGIN
+  $ service-management-ops plugins:link PLUGIN
 
 ARGUMENTS
   PATH  [default: .] path to plugin
@@ -491,18 +491,18 @@ DESCRIPTION
 
 
 EXAMPLES
-  $ io-ops plugins:link myplugin
+  $ service-management-ops plugins:link myplugin
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.4.7/src/commands/plugins/link.ts)_
 
-## `io-ops plugins:uninstall PLUGIN...`
+## `service-management-ops plugins:uninstall PLUGIN...`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ io-ops plugins:uninstall PLUGIN...
+  $ service-management-ops plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -515,17 +515,17 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ io-ops plugins:unlink
-  $ io-ops plugins:remove
+  $ service-management-ops plugins:unlink
+  $ service-management-ops plugins:remove
 ```
 
-## `io-ops plugins:uninstall PLUGIN...`
+## `service-management-ops plugins:uninstall PLUGIN...`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ io-ops plugins:uninstall PLUGIN...
+  $ service-management-ops plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -538,19 +538,19 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ io-ops plugins:unlink
-  $ io-ops plugins:remove
+  $ service-management-ops plugins:unlink
+  $ service-management-ops plugins:remove
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.4.7/src/commands/plugins/uninstall.ts)_
 
-## `io-ops plugins:uninstall PLUGIN...`
+## `service-management-ops plugins:uninstall PLUGIN...`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ io-ops plugins:uninstall PLUGIN...
+  $ service-management-ops plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -563,17 +563,17 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ io-ops plugins:unlink
-  $ io-ops plugins:remove
+  $ service-management-ops plugins:unlink
+  $ service-management-ops plugins:remove
 ```
 
-## `io-ops plugins:update`
+## `service-management-ops plugins:update`
 
 Update installed plugins.
 
 ```
 USAGE
-  $ io-ops plugins:update [-h] [-v]
+  $ service-management-ops plugins:update [-h] [-v]
 
 FLAGS
   -h, --help     Show CLI help.
@@ -585,13 +585,13 @@ DESCRIPTION
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.4.7/src/commands/plugins/update.ts)_
 
-## `io-ops profiles:delete FISCALCODE`
+## `service-management-ops profiles:delete FISCALCODE`
 
 Delete a profile
 
 ```
 USAGE
-  $ io-ops profiles:delete FISCALCODE [-a] [-p] [-m] [-n] [-s]
+  $ service-management-ops profiles:delete FISCALCODE [-a] [-p] [-m] [-n] [-s]
 
 FLAGS
   -a, --all           delete items in all containers
@@ -604,15 +604,15 @@ DESCRIPTION
   Delete a profile
 ```
 
-_See code: [src/commands/profiles/delete.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/profiles/delete.ts)_
+_See code: [src/commands/profiles/delete.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/profiles/delete.ts)_
 
-## `io-ops profiles:exist`
+## `service-management-ops profiles:exist`
 
 Returns the input CSV with a new column that is true if a profile for that fiscal code exists.
 
 ```
 USAGE
-  $ io-ops profiles:exist [-i <value>] [-p <value>]
+  $ service-management-ops profiles:exist [-i <value>] [-p <value>]
 
 FLAGS
   -i, --input=<value>     Input file (CSV, with the CF as first column) - defaults to stdin
@@ -622,29 +622,29 @@ DESCRIPTION
   Returns the input CSV with a new column that is true if a profile for that fiscal code exists.
 ```
 
-_See code: [src/commands/profiles/exist.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/profiles/exist.ts)_
+_See code: [src/commands/profiles/exist.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/profiles/exist.ts)_
 
-## `io-ops profiles:list`
+## `service-management-ops profiles:list`
 
 Lists all profiles
 
 ```
 USAGE
-  $ io-ops profiles:list
+  $ service-management-ops profiles:list
 
 DESCRIPTION
   Lists all profiles
 ```
 
-_See code: [src/commands/profiles/list.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/profiles/list.ts)_
+_See code: [src/commands/profiles/list.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/profiles/list.ts)_
 
-## `io-ops selfcare:manualOnboarding BODY`
+## `service-management-ops selfcare:manualOnboarding BODY`
 
 Execute Manual Onboarding on Selfcare
 
 ```
 USAGE
-  $ io-ops selfcare:manualOnboarding BODY
+  $ service-management-ops selfcare:manualOnboarding BODY
 
 ARGUMENTS
   BODY  Selfcare manual onboarding body
@@ -653,27 +653,27 @@ DESCRIPTION
   Execute Manual Onboarding on Selfcare
 
 EXAMPLES
-  $ io-ops manual-onboarding-by-body '{}'
+  $ service-management-ops manual-onboarding-by-body '{}'
 ```
 
-_See code: [src/commands/selfcare/manualOnboarding.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/selfcare/manualOnboarding.ts)_
+_See code: [src/commands/selfcare/manualOnboarding.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/selfcare/manualOnboarding.ts)_
 
-## `io-ops services:check`
+## `service-management-ops services:check`
 
 ```
 USAGE
-  $ io-ops services:check
+  $ service-management-ops services:check
 ```
 
-_See code: [src/commands/services/check.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/services/check.ts)_
+_See code: [src/commands/services/check.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/services/check.ts)_
 
-## `io-ops services:details`
+## `service-management-ops services:details`
 
 Retrieve service info and metadata from a given service ID
 
 ```
 USAGE
-  $ io-ops services:details [-i <value>]
+  $ service-management-ops services:details [-i <value>]
 
 FLAGS
   -i, --serviceId=<value>  The service ID
@@ -682,29 +682,29 @@ DESCRIPTION
   Retrieve service info and metadata from a given service ID
 ```
 
-_See code: [src/commands/services/details.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/services/details.ts)_
+_See code: [src/commands/services/details.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/services/details.ts)_
 
-## `io-ops services:list`
+## `service-management-ops services:list`
 
 List all services in csv format
 
 ```
 USAGE
-  $ io-ops services:list
+  $ service-management-ops services:list
 
 DESCRIPTION
   List all services in csv format
 ```
 
-_See code: [src/commands/services/list.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/services/list.ts)_
+_See code: [src/commands/services/list.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/services/list.ts)_
 
-## `io-ops subscriptions:list-delete DELETEFILEPATH [DELAYONDELETE] [OWNEREMAIL]`
+## `service-management-ops subscriptions:list-delete DELETEFILEPATH [DELAYONDELETE] [OWNEREMAIL]`
 
 Migrate metadata or logos from github
 
 ```
 USAGE
-  $ io-ops subscriptions:list-delete DELETEFILEPATH [DELAYONDELETE] [OWNEREMAIL]
+  $ service-management-ops subscriptions:list-delete DELETEFILEPATH [DELAYONDELETE] [OWNEREMAIL]
 
 ARGUMENTS
   DELETEFILEPATH  CSV Input file containing subscription list
@@ -715,18 +715,18 @@ DESCRIPTION
   Migrate metadata or logos from github
 
 EXAMPLES
-  $ io-ops subscriptions:list-delete -inputListPath=/tmp/input.csv
+  $ service-management-ops subscriptions:list-delete -inputListPath=/tmp/input.csv
 ```
 
-_See code: [src/commands/subscriptions/list-delete.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/subscriptions/list-delete.ts)_
+_See code: [src/commands/subscriptions/list-delete.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/subscriptions/list-delete.ts)_
 
-## `io-ops users:create`
+## `service-management-ops users:create`
 
 Create a new user with a random password in the Active Directory Azure B2C, then create a corresponding user on the API management resource.
 
 ```
 USAGE
-  $ io-ops users:create --payload <value>
+  $ service-management-ops users:create --payload <value>
 
 FLAGS
   --payload=<value>  (required) JSON string rapresentation of a user
@@ -736,18 +736,18 @@ DESCRIPTION
   API management resource.
 
 EXAMPLES
-  $ io-ops api-service:create  --json='{ "email": "foobar@example.com","first_name": "string","last_name": "string"}'
+  $ service-management-ops api-service:create  --json='{ "email": "foobar@example.com","first_name": "string","last_name": "string"}'
 ```
 
-_See code: [src/commands/users/create.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/users/create.ts)_
+_See code: [src/commands/users/create.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/users/create.ts)_
 
-## `io-ops users:get EMAIL`
+## `service-management-ops users:get EMAIL`
 
 Gets the user information, that is the complete list of subscription and the complete list of groups for the User identified by the provided email
 
 ```
 USAGE
-  $ io-ops users:get EMAIL
+  $ service-management-ops users:get EMAIL
 
 ARGUMENTS
   EMAIL  email
@@ -757,18 +757,18 @@ DESCRIPTION
   identified by the provided email
 
 EXAMPLES
-  $ io-ops users:get example@example.it
+  $ service-management-ops users:get example@example.it
 ```
 
-_See code: [src/commands/users/get.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/users/get.ts)_
+_See code: [src/commands/users/get.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/users/get.ts)_
 
-## `io-ops users:get-all`
+## `service-management-ops users:get-all`
 
 Get users max 100 per call use cursor for iterating
 
 ```
 USAGE
-  $ io-ops users:get-all [--cursor <value>]
+  $ service-management-ops users:get-all [--cursor <value>]
 
 FLAGS
   --cursor=<value>  Items to skip
@@ -777,20 +777,20 @@ DESCRIPTION
   Get users max 100 per call use cursor for iterating
 
 EXAMPLES
-  $ io-ops users:get-all
+  $ service-management-ops users:get-all
 
-  $ io-ops users:get-all --cursor=100
+  $ service-management-ops users:get-all --cursor=100
 ```
 
-_See code: [src/commands/users/get-all.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/users/get-all.ts)_
+_See code: [src/commands/users/get-all.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/users/get-all.ts)_
 
-## `io-ops users:subscription EMAIL SUBSCRIPTIONID`
+## `service-management-ops users:subscription EMAIL SUBSCRIPTIONID`
 
 Create a Subscription identified by the provided subscription id for the User identified by the provided email
 
 ```
 USAGE
-  $ io-ops users:subscription EMAIL SUBSCRIPTIONID --product_name <value>
+  $ service-management-ops users:subscription EMAIL SUBSCRIPTIONID --product_name <value>
 
 ARGUMENTS
   EMAIL           email
@@ -803,18 +803,18 @@ DESCRIPTION
   Create a Subscription identified by the provided subscription id for the User identified by the provided email
 
 EXAMPLES
-  $ io-ops users:subscription  example@example.com SUBSCRIPTIONID --product_name=PRODUCTNAME
+  $ service-management-ops users:subscription  example@example.com SUBSCRIPTIONID --product_name=PRODUCTNAME
 ```
 
-_See code: [src/commands/users/subscription.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/users/subscription.ts)_
+_See code: [src/commands/users/subscription.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/users/subscription.ts)_
 
-## `io-ops users:update-groups EMAIL`
+## `service-management-ops users:update-groups EMAIL`
 
 Update the list of groups (permissions) associated to the User identified by the provided email
 
 ```
 USAGE
-  $ io-ops users:update-groups EMAIL --groups <value>
+  $ service-management-ops users:update-groups EMAIL --groups <value>
 
 ARGUMENTS
   EMAIL  email
@@ -826,18 +826,18 @@ DESCRIPTION
   Update the list of groups (permissions) associated to the User identified by the provided email
 
 EXAMPLES
-  $ io-ops users:update-groups  --groups=ApiInfoRead,ApiLimitedMessageWrite,ApiMessageRead
+  $ service-management-ops users:update-groups  --groups=ApiInfoRead,ApiLimitedMessageWrite,ApiMessageRead
 ```
 
-_See code: [src/commands/users/update-groups.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/users/update-groups.ts)_
+_See code: [src/commands/users/update-groups.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/users/update-groups.ts)_
 
-## `io-ops users:update_user_token_name EMAIL TOKENNAMEVALUE`
+## `service-management-ops users:update_user_token_name EMAIL TOKENNAMEVALUE`
 
 Update the Token Name attribute associated to the User identified by the provided email
 
 ```
 USAGE
-  $ io-ops users:update_user_token_name EMAIL TOKENNAMEVALUE
+  $ service-management-ops users:update_user_token_name EMAIL TOKENNAMEVALUE
 
 ARGUMENTS
   EMAIL           email
@@ -847,18 +847,18 @@ DESCRIPTION
   Update the Token Name attribute associated to the User identified by the provided email
 
 EXAMPLES
-  $ io-ops users:update-token-name
+  $ service-management-ops users:update-token-name
 ```
 
-_See code: [src/commands/users/update_user_token_name.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/users/update_user_token_name.ts)_
+_See code: [src/commands/users/update_user_token_name.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/users/update_user_token_name.ts)_
 
-## `io-ops users:write-messages EMAIL ACTION`
+## `service-management-ops users:write-messages EMAIL ACTION`
 
 Update the list of groups (permissions) associated to the User identified by the provided email
 
 ```
 USAGE
-  $ io-ops users:write-messages EMAIL ACTION
+  $ service-management-ops users:write-messages EMAIL ACTION
 
 ARGUMENTS
   EMAIL   email
@@ -868,18 +868,18 @@ DESCRIPTION
   Update the list of groups (permissions) associated to the User identified by the provided email
 
 EXAMPLES
-  $ io-ops users:write-messages example@example.it enable
+  $ service-management-ops users:write-messages example@example.it enable
 ```
 
-_See code: [src/commands/users/write-messages.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/users/write-messages.ts)_
+_See code: [src/commands/users/write-messages.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/users/write-messages.ts)_
 
-## `io-ops users:write-services EMAIL ACTION`
+## `service-management-ops users:write-services EMAIL ACTION`
 
 Update the list of groups (permissions) associated to the User identified by the provided email
 
 ```
 USAGE
-  $ io-ops users:write-services EMAIL ACTION
+  $ service-management-ops users:write-services EMAIL ACTION
 
 ARGUMENTS
   EMAIL   email
@@ -889,10 +889,10 @@ DESCRIPTION
   Update the list of groups (permissions) associated to the User identified by the provided email
 
 EXAMPLES
-  $ io-ops users:write-services example@example.it enable
+  $ service-management-ops users:write-services example@example.it enable
 ```
 
-_See code: [src/commands/users/write-services.ts](https://github.com/pagopa/io-ops/blob/v1.0.0/src/commands/users/write-services.ts)_
+_See code: [src/commands/users/write-services.ts](https://github.com/pagopa/service-management-ops/blob/v1.0.0/src/commands/users/write-services.ts)_
 <!-- commandsstop -->
 
 ```
