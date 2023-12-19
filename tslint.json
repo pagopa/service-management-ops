@@ -1,0 +1,11 @@
+{
+  "extends": "italia-tslint-rules/strong",
+  "linterOptions": {
+    "exclude": [
+      "src/generated/*.ts"
+    ]
+  },
+  "rules": {
+    "object-literal-sort-keys": false
+  }
+}
